@@ -30,9 +30,10 @@ and <https://www.talkingquickly.co.uk/2021/01/macos-setup-with-ansible>
 
 ## Next steps
 
-- Use ASDF as version manager for node, python etc (see original repo).
 - Add more packages (typescript-language-server typescript)
 - ssh + ansible vault
-- dotfiles
+- dotfiles using Stow (or alternatively see
+  https://github.com/geerlingguy/dotfiles)
 - git setup (see https://github.com/ThePrimeagen/ansible/tree/master/tasks,
   remember this is ubuntu repo)
+- Use ASDF as version manager for node, python etc (see original repo).
