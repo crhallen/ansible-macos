@@ -1,0 +1,72 @@
+---
+- hosts: localhost
+  tasks:
+    # - name: Install homebrew
+    #   include_role:
+    #     name: geerlingguy.mac.homebrew
+
+    # - name: Make sure homebrew bin is in path
+    #   ansible.builtin.lineinfile:
+    #     path: /etc/paths
+    #     state: present
+    #     line: '/opt/homebrew/bin'
+    #   become: true
+    #   become_user: root
+
+    # # - name: 'add custom homebrew repos'
+    # #   community.general.homebrew_tap:
+    # #     name: [homebrew/cask-versions]
+
+    # - name: Install core packages via brew casks
+    #   community.general.homebrew_cask:
+    #     name: '{{ item }}'
+    #   ignore_errors: yes
+    #   with_items:
+    #     - docker
+    #     # - iterm2
+    #     # - slack
+    #     # - visual-studio-code
+    #     # - zoom
+
+    # - name: 'Install homebrew packages'
+    #   community.general.homebrew:
+    #     name: [
+    #         'curl',
+    #         'fzf',
+    #         'openssl',
+    #         # 'tmux',
+    #         'vim',
+    #         'yarn',
+    #         'zsh',
+    #       ]
+    #     state: present
+    #     update_homebrew: yes
+
+    # - name: Get the path to ZSH
+    #   become: false
+    #   local_action: command which zsh
+    #   register: zsh_path
+
+    # - name: 'Ensure homebrew zsh is in allowed shells'
+    #   lineinfile:
+    #     path: /etc/shells
+    #     line: '{{ zsh_path.stdout }}'
+    #   become: true
+
+    # - name: Install Oh My ZSH
+    #   shell:
+    #     sh -c "$(curl -fsSL
+    #     https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    #   args:
+    #     creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
+
+    # - name: Set ZSH as the default shell
+    #   shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
+    #   become: true
+
+    # - name: 'Install ZSH config'
+    #   copy:
+    #     src: config/.zshrc
+    #     dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
+    #     owner: "{{ lookup('env', 'USER') }}"
+    #     force: no

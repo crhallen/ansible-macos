@@ -1,0 +1,2 @@
+#!/bin/sh
+ansible-playbook -i "localhost," -c local ansible-osx.yml --ask-become-pass
