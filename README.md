@@ -14,7 +14,7 @@ steps of:
 
 And then runs the main playbook ansible-osx.yml.
 
-For future updates, bin/apply can be used to run just the Ansible playbook
+For future updates, `bin/apply` can be used to run just the Ansible playbook
 without the setup commands.
 
 It's important to note that this isn't designed to be particularly robust,
@@ -25,8 +25,14 @@ process a few times.
 ## Credit
 
 This is based on
-https://github.com/TalkingQuickly/ansible-osx-setup/blob/master/ansible_osx.yml
+<https://github.com/TalkingQuickly/ansible-osx-setup/blob/master/ansible_osx.yml>
+and <https://www.talkingquickly.co.uk/2021/01/macos-setup-with-ansible>
 
 ## Next steps
 
 - Use ASDF as version manager for node, python etc (see original repo).
+- Add more packages (typescript-language-server typescript)
+- ssh + ansible vault
+- dotfiles
+- git setup (see https://github.com/ThePrimeagen/ansible/tree/master/tasks,
+  remember this is ubuntu repo)

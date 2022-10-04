@@ -13,9 +13,9 @@
       become: true
       become_user: root
 
-    # - name: 'add custom homebrew repos'
-    #   community.general.homebrew_tap:
-    #     name: [homebrew/cask-versions]
+    - name: 'add custom homebrew repos'
+      community.general.homebrew_tap:
+        name: [homebrew/cask-versions]
 
     - name: Install core packages via brew casks
       community.general.homebrew_cask:
@@ -23,22 +23,19 @@
       ignore_errors: yes
       with_items:
         - docker
-        # - iterm2
-        # - slack
-        # - visual-studio-code
-        # - zoom
+        - iterm2
+        - slack
+        - visual-studio-code
+        - zoom
+
+    - name: 'Install from Mac app store'
+      shell: mas install {{ item }}
+      with_items:
+        - 497799835 # xcode
 
     - name: 'Install homebrew packages'
       community.general.homebrew:
-        name: [
-            'curl',
-            'fzf',
-            'openssl',
-            # 'tmux',
-            'vim',
-            'yarn',
-            'zsh',
-          ]
+        name: ['curl', 'fzf', 'openssl', 'tmux', 'vim', 'yarn', 'zsh']
         state: present
         update_homebrew: yes
 
