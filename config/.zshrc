@@ -10,7 +10,3 @@ ZSH_DISABLE_COMPFIX=true
 
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
-
-# # Load asdf
-# . $HOME/.asdf/asdf.sh
-# . $HOME/.asdf/completions/asdf.bash

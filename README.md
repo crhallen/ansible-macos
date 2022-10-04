@@ -26,3 +26,7 @@ process a few times.
 
 This is based on
 https://github.com/TalkingQuickly/ansible-osx-setup/blob/master/ansible_osx.yml
+
+## Next steps
+
+- Use ASDF as version manager for node, python etc (see original repo).
